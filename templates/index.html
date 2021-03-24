@@ -2,10 +2,14 @@
    <head>
       <meta charset="UTF-8" />
       <title>Shopping Cart</title>
-      <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" type="text/css" />
    </head>
 
    <body>
+      <h1>
+         Azamon
+      </h1>
+
       <form action="/add" method="POST">
          <input type="text" value="item1" name="item-name"/>
          <input type="submit" value="Add to Cart"/>
