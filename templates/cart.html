@@ -3,12 +3,12 @@
    <head>
       <meta charset="UTF-8" />
       <meta charset="utf-8" />
-      <title>Shopping Cart</title>
-      <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+      <title>Cart</title>
+      <link rel="stylesheet" href="{{url_for('static', filename='css/shopping-cart-styles.css')}}" type="text/css" />
    </head>
 
    <body>
-      <p>cart</p>
+      <h2>Cart</h2>
       
       {% for item in cart %}
          <p>
@@ -17,11 +17,11 @@
       {% endfor %}
 
       <form action="/clear" method="POST">
-         <input type="submit" value="Clear Cart"/>
+         <input type="submit" value="Clear Cart" class="next"/>
       </form>
 
       <form action="/checkout" method="POST">
-         <input type="submit" value="Proceed to Checkout"/>
+         <input type="submit" value="Proceed to Checkout" class="next"/>
       </form>
    </body>
 </html>
