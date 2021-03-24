@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta charset="utf-8" />
+      <title>Shopping Cart</title>
+      <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+   </head>
+
+   <body>
+      <p>cart</p>
+      
+      {% for item in cart %}
+         <p>
+            {{item}}
+         </p>
+      {% endfor %}
+
+      <form action="/clear" method="POST">
+         <input type="submit" value="Clear Cart"/>
+      </form>
+
+      <form action="/checkout" method="POST">
+         <input type="submit" value="Proceed to Checkout"/>
+      </form>
+   </body>
+</html>
