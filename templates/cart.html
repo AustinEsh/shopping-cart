@@ -10,18 +10,37 @@
    <body>
       <h2>Cart</h2>
       
-      {% for item in cart %}
-         <p>
-            {{item}}
-         </p>
-      {% endfor %}
+      <section class="items">
+         {% if cart == [] %}
+            <p>
+               Cart is empty.
+            </p>
+         {% else %}
+            {% for item in cart %}
+               <div class="item">
+                  <img src="https://via.placeholder.com/150"/>
+                  <form>
+                     <p class="item">
+                        {{item}}
+                     </p>
+                  </form>
+               </div>
+            {% endfor %}
+         {% endif %}
+      </section>
 
-      <form action="/clear" method="POST">
-         <input type="submit" value="Clear Cart" class="next"/>
-      </form>
+      {% if cart == [] %}
+         <form action="/clear" method="POST">
+            <input type="submit" value="Return to Main Page" class="next"/>
+         </form>
+      {% else %}
+         <form action="/clear" method="POST">
+            <input type="submit" value="Clear Cart" class="next"/>
+         </form>
 
-      <form action="/checkout" method="POST">
-         <input type="submit" value="Proceed to Checkout" class="next"/>
-      </form>
+         <form action="/checkout" method="POST">
+            <input type="submit" value="Proceed to Checkout" class="next"/>
+         </form>
+      {% endif %}
    </body>
 </html>
