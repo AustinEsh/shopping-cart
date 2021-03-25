@@ -8,7 +8,7 @@ def index():
    return render_template("index.html")
 
 @app.route('/add', methods=["POST"])
-def test():
+def add_to_cart():
    cart.append(request.form['item-name'])
    return render_template("index.html", cart = cart)
 
