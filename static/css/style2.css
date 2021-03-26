@@ -4,20 +4,23 @@
 }
 
 body {
-    background-color: rgb(245, 244, 243);
+    background-color: rgb(174, 178, 182);
     margin-left: auto;
     margin-right: auto;
     width: 75vw;
 }
 
 h1 {
+    color: rgb(245, 244, 243);
     font-size: 4vw;
-    margin-bottom: 9vh;
-    margin-top: 7vh;
+    margin-bottom: 4vh;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
     text-align: center;
 }
 
 h2 {
+    color: rgb(245, 244, 243);
     font-size: 3vw;
     margin: 4vh 0;
     text-align: center;
@@ -42,7 +45,15 @@ img {
     margin-bottom: 1vh;
 }
 
+input[type="submit"],
+h1,
+h2 {
+    background-color: #232F3E;
+}
+
 input[type="submit"] {
+    border-color: blue;
+    color: white;
     width: 100%;
 }
 
