@@ -39,6 +39,7 @@ h2 {
     margin-bottom: 10vh;
     margin-left: 2vw;
     margin-right: 2vw;
+    width: 15vw;
 }
 
 img {
@@ -69,4 +70,25 @@ input[readonly] {
     margin-bottom: 10vh;
     padding-bottom: 1vh;
     padding-top: 1vh;
+}
+
+.empty {
+    font-size: 1.5em;
+    margin-bottom: 4vh;
+    margin-left: 3vw;
+}
+
+@media (max-width: 699px) {
+    .items {
+        display: block;
+    }
+
+    .item{
+        margin-bottom: 3vh;
+        width: 50vw;
+    }
+
+    input[readonly] {
+        font-size: 2em;
+    }
 }
